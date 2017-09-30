@@ -1,0 +1,8 @@
+library(rvest)
+library(tidyverse)
+library(stringr)
+library(magrittr)
+library(purrr)
+library(progress)
+library(lubridate)
+library(bigrquery)

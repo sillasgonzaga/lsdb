@@ -7,3 +7,4 @@
 *.Rda
 *.csv
 lsdb.Rproj
+.httr-oauth
