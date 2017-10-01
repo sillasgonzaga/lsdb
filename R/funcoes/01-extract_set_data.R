@@ -1,5 +1,13 @@
 extract_set_data <- function(set.url) {
+<<<<<<< HEAD
 
+=======
+  
+  # test if url is valid
+  url_status <- httr::GET(set.url)$status_code
+  if (url_status == 500) return(NULL)
+  
+>>>>>>> 767b91df7eac724d673fcd6b248de8d2abc95133
   #browser()
   # try to read tracklist table from url 
   x <- set.url %>% 
@@ -19,10 +27,16 @@ extract_set_data <- function(set.url) {
   event <- x  %>%
     html_nodes(".page_liveset > div:nth-child(1) > h1:nth-child(1) > a:nth-child(3)") %>% 
     html_text(trim = TRUE)
+<<<<<<< HEAD
   # if event returns errors, use another css selector method
   if (length(event) == 0){
     event <- url %>% 
       read_html() %>% 
+=======
+  # if event returns an empty character, use another css selector method
+  if (length(event) == 0){
+    event <- x %>% 
+>>>>>>> 767b91df7eac724d673fcd6b248de8d2abc95133
       html_nodes(css = "a:nth-child(4)") %>% 
       html_text()
   }
@@ -93,7 +107,7 @@ extract_set_data <- function(set.url) {
       df.tracklist,
       tracklist = tb[["X2"]],
       stringsAsFactors = FALSE
-      )
+    )
     # return dataframe
     df.tracklist
   } else {

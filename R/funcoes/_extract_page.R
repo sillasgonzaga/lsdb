@@ -3,7 +3,6 @@
 
 # create function to extract page data
 extract_page_data <- function(lsdb_page_number) {
-  browser()
   # create vector of links from page one to last
   #pages_vector <- paste0("https://lsdb.eu/livesets?page=", 1:last.page)
   lsdb_page <- paste0("https://lsdb.eu/livesets?page=", lsdb_page_number)
