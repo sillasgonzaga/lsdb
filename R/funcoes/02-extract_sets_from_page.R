@@ -12,7 +12,7 @@ extract_sets_from_page <- function(lsdb_page_number){
 
   file.name <- sprintf("data-raw/tracklist-page-%s.Rds", pg_num)
   saveRDS(df_tracklist, file.name)
-  #df_tracklist
+  df_tracklist
 }
 
 
