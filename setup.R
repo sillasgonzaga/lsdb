@@ -6,5 +6,6 @@ library(purrr)
 library(progress)
 library(lubridate)
 library(bigrquery)
-
+library(parallel)
 if (!dir.exists("data-raw")) dir.create("data-raw")
+
