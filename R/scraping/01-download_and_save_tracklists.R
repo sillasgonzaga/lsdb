@@ -1,4 +1,5 @@
 source("setup.R")
+source("R/funcoes/00-extract_page_urls.R")
 source("R/funcoes/01-extract_set_data.R")
 source("R/funcoes/02-extract_sets_from_page.R")
 source("R/funcoes/_extract_page.R")
