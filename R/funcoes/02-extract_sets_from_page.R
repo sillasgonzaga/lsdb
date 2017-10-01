@@ -11,6 +11,11 @@ extract_sets_from_page <- function(lsdb_page_number){
   pg_num <- str_pad(lsdb_page_number, width = 4, pad = "0")
 
   file.name <- sprintf("data-raw/tracklist-page-%s.Rds", pg_num)
+  # only save if df_tracklist is a dataframe
+  if (!inherits(df_tracklist, "data.frame")){
+    stop("O df_tracklist não foi gerado corretamente.")
+  }
+  
   saveRDS(df_tracklist, file.name)
   df_tracklist
 }
